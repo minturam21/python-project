@@ -67,11 +67,17 @@ graph TB
         M --> N[Display:<br/>'Keep shining! Your<br/>happiness is contagious!']
     end
     
-    style A fill:#87CEEB,stroke:#333,stroke-width:3px
-    style B fill:#87CEEB,stroke:#333,stroke-width:2px
-    style C fill:#87CEEB,stroke:#333,stroke-width:2px
-    style H fill:#90EE90,stroke:#333,stroke-width:2px
-    style N fill:#98FB98,stroke:#333,stroke-width:2px
+    %% === Styling Section ===
+    style A fill:#FFD700,stroke:#333,stroke-width:3px,color:black
+    style B fill:#87CEEB,stroke:#333,stroke-width:2px,color:black
+    style C fill:#87CEEB,stroke:#333,stroke-width:2px,color:black
+    style D1 fill:#E0FFFF,stroke:#333,stroke-width:1px,color:black
+    style D2 fill:#E0FFFF,stroke:#333,stroke-width:1px,color:black
+    style D3 fill:#E0FFFF,stroke:#333,stroke-width:1px,color:black
+    style D4 fill:#E0FFFF,stroke:#333,stroke-width:1px,color:black
+    style H fill:#90EE90,stroke:#333,stroke-width:2px,color:black
+    style N fill:#98FB98,stroke:#333,stroke-width:2px,color:black
+
 ```
 # 📚 Project Structure
 
