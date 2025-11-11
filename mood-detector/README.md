@@ -24,7 +24,7 @@ It then returns an encouraging or empathetic quote that matches the detected emo
 - Interactive loop: keeps running until the user types `quit` or `exit`.
 
 ---
-
+```mermaid
 flowchart TD
 A[Start Program] --> B[User types mood statement]
 B --> C[convert input to lowercase]
@@ -40,7 +40,7 @@ J --> K[Display Detected Mood + Quote]
 K --> L[Ask for next input or exit]
 L --> M[End]
 
-
+```
 # 📚 Project Structure
 
 mood-detector/       
