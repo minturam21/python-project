@@ -67,7 +67,7 @@ graph TB
         M --> N[Display:<br/>'Keep shining! Your<br/>happiness is contagious!']
     end
     
-    style A fill:#FFD700,stroke:#333,stroke-width:3px
+    style A fill:#87CEEB,stroke:#333,stroke-width:3px
     style B fill:#87CEEB,stroke:#333,stroke-width:2px
     style C fill:#87CEEB,stroke:#333,stroke-width:2px
     style H fill:#90EE90,stroke:#333,stroke-width:2px
