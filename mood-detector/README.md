@@ -43,7 +43,6 @@ L --> M[End]
 
 # 📚 Project Structure
 
-mood-detector/
-│        
+mood-detector/       
 ├── MoodDetector.ipynb                      
 └── README.md 
