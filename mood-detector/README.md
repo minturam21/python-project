@@ -25,21 +25,53 @@ It then returns an encouraging or empathetic quote that matches the detected emo
 
 ---
 ```mermaid
-flowchart TD
-A[Start Program] --> B[User types mood statement]
-B --> C[convert input to lowercase]
-C --> D[Check for keywords across all mood categories]
-D --> E[Count matches for each mood]
-E --> F[Find mood with highest score]
-F --> G{Any matches found?}
-G -->|Yes| H[Select matching mood]
-G -->|No| I[Set mood = neutral]
-H --> J[Pick a random quote from mood_quotes]
-I --> J
-J --> K[Display Detected Mood + Quote]
-K --> L[Ask for next input or exit]
-L --> M[End]
-
+graph TB
+    subgraph MoodDetector["🎭 MoodDetector Object"]
+        A[MoodDetector Class]
+    end
+    
+    A --> B[mood_keywords Dictionary]
+    A --> C[mood_quotes Dictionary]
+    
+    subgraph Keywords["📚 mood_keywords Structure"]
+        B --> D1['happy']
+        B --> D2['sad']
+        B --> D3['angry']
+        B --> D4['anxious']
+        B --> D5[+ 4 more moods...]
+        
+        D1 --> E1["['happy', 'joy', 'excited',<br/>'great', 'awesome', ...]"]
+        D2 --> E2["['sad', 'unhappy', 'down',<br/>'miserable', ...]"]
+        D3 --> E3["['angry', 'mad', 'furious',<br/>'annoyed', ...]"]
+        D4 --> E4["['anxious', 'worried',<br/>'nervous', 'stressed', ...]"]
+    end
+    
+    subgraph Quotes["💬 mood_quotes Structure"]
+        C --> F1['happy']
+        C --> F2['sad']
+        C --> F3['angry']
+        C --> F4[+ 5 more moods...]
+        
+        F1 --> G1["['Keep shining!...',<br/>'Happiness looks good...',<br/>'What a wonderful mood...',<br/>'Your joy is a gift...']"]
+        F2 --> G2["['It's okay to feel sad...',<br/>'Be gentle with yourself...',<br/>'Even the darkest night...',<br/>'Your feelings are valid...']"]
+        F3 --> G3["['Take a deep breath...',<br/>'Anger is valid...',<br/>'Let it out...',<br/>'Channel this energy...']"]
+    end
+    
+    subgraph Example["📝 Example Flow"]
+        H[User Input:<br/>'I feel happy and excited!']
+        H --> I[Search in keywords]
+        I --> J[Found: 'happy' ✓<br/>Found: 'excited' ✓]
+        J --> K[happy score = 2]
+        K --> L[Highest score = happy]
+        L --> M[Get random quote<br/>from happy quotes]
+        M --> N[Display:<br/>'Keep shining! Your<br/>happiness is contagious!']
+    end
+    
+    style A fill:#FFD700,stroke:#333,stroke-width:3px
+    style B fill:#87CEEB,stroke:#333,stroke-width:2px
+    style C fill:#87CEEB,stroke:#333,stroke-width:2px
+    style H fill:#90EE90,stroke:#333,stroke-width:2px
+    style N fill:#98FB98,stroke:#333,stroke-width:2px
 ```
 # 📚 Project Structure
 
